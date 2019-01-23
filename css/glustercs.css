@@ -134,10 +134,14 @@ body{
     padding: 50px 20px;
     background-color: #fff;
 }
+.projects-box{
+    padding: 20px;
+}
 
 .copyright{
-    margin-top:50px;
+    margin-top:30px;
     color: #e6e6e6;
+    padding: 20px;
 }
 
 /* Content Styles */
