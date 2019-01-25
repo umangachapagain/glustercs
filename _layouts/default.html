@@ -2,7 +2,11 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>{{ page.title }}</title>
+        {% if page.title %}
+        <title>{{ page.title }} - {{ site.title }}</title>
+        {% else %}
+        <title>{{ site.title }} - {{ site.subtitle }}</title>
+        {% endif %}
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="{{ site.baseurl }}/images/fav.png" rel="icon" type="image/x-icon" />
         <link rel="apple-touch-icon" href="{{ site.baseurl }}/images/fav.png" />
@@ -13,7 +17,7 @@
         <meta property="twitter:description" content="{{ page.title }}"/>
         <meta property="og:url" content="{{ page.url }}" />
         <meta property="twitter:url" content="{{ page.url }}" />
-        
+
         <link rel="stylesheet" href="{{ site.baseurl }}/css/pure-min.css"/>
         <!--[if lte IE 8]>
             <link rel="stylesheet" href="{{ site.baseurl }}/css/grids-responsive-old-ie-min.css">
